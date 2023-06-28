@@ -12,16 +12,20 @@ export default function UserForm({ onUserAdd }: any) {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label>Name</label>
-        <input value={name} onChange={(e) => setName(e.target.value)}></input>
+        <label htmlFor="name">Name</label>
+        <input
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          id="name"
+        ></input>
       </div>
       <div>
-        <label>
-          <input
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          ></input>
-        </label>
+        <label htmlFor="email">Enter Email</label>
+        <input
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          id="email"
+        ></input>
       </div>
       <button>Add User</button>
     </form>
